@@ -1,0 +1,22 @@
+# Used by our cargo build.rs script to get variables from autoconf.
+#
+# The "configure" script will generate "config.rust" from "config.rust.in",
+# and then build.rs will read "config.rust".
+
+BUILDDIR=/tmp/tor-build/tor-0.3.4.9
+TOR_LDFLAGS_zlib=-L/tmp/tor-build/tor-0.3.4.9/../zlib-1.2.11/install/lib
+TOR_LDFLAGS_openssl=-L/tmp/tor-build/tor-0.3.4.9/../openssl-1.0.2m/install/lib
+TOR_LDFLAGS_libevent=-L/tmp/tor-build/tor-0.3.4.9/../libevent-2.1.8-stable/install/lib
+TOR_ZLIB_LIBS=/tmp/tor-build/tor-0.3.4.9/../zlib-1.2.11/install/lib/libz.a
+TOR_LIB_MATH=-lm
+TOR_LIBEVENT_LIBS=/tmp/tor-build/tor-0.3.4.9/../libevent-2.1.8-stable/install/lib/libevent.a 
+TOR_OPENSSL_LIBS=/tmp/tor-build/tor-0.3.4.9/../openssl-1.0.2m/install/lib/libssl.a /tmp/tor-build/tor-0.3.4.9/../openssl-1.0.2m/install/lib/libcrypto.a
+TOR_LIB_WS32=
+TOR_LIB_GDI=
+TOR_LIB_USERENV=
+CURVE25519_LIBS=
+TOR_SYSTEMD_LIBS=
+TOR_LZMA_LIBS=
+TOR_ZSTD_LIBS=
+LIBS=-lpthread -ldl 
+LDFLAGS= -pie -z relro -z now -rdynamic
